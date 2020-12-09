@@ -1,0 +1,92 @@
+/*
+===========
+animation: form animation
+Language: JavaScript
+Create By: Md Tanjim Ahmmed
+Create Date: 8 Dec 2020
+===========
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+body {
+    background-image: linear-gradient(120deg, #1D976C, #93F9B9);
+    min-height: 100vh;
+    display: flex;
+    transition: background 0.5s ease;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+}
+.field_name, .field_email, .field_password, .field_finish {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    background: #fff;
+    height: 50px;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+}
+.field_name i, .field_email i, .field_password i, .field_finish i {
+    padding: 10px;
+    cursor: pointer;
+}
+.field_name input, .field_email input, .field_password input {
+    flex: 1;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: none;
+}
+div.inactive {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, 50%);
+    -webkit-transform: translate(-50%, 50%);
+    -moz-transform: translate(-50%, 50%);
+    -ms-transform: translate(-50%, 50%);
+    -o-transform: translate(-50%, 50%);
+}
+
+div.active {
+    opacity: 1;
+    pointer-events: all;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes shake{
+    0%{
+        transform: translate(-50%, -50%) rotate(0deg);
+        -webkit-transform: translate(-50%, -50%) rotate(0deg);
+        -moz-transform: translate(-50%, -50%) rotate(0deg);
+        -ms-transform: translate(-50%, -50%) rotate(0deg);
+        -o-transform: translate(-50%, -50%) rotate(0deg);
+}
+    50%{
+        transform: translate(-50%, -50%) rotate(10deg);
+        -webkit-transform: translate(-50%, -50%) rotate(10deg);
+        -moz-transform: translate(-50%, -50%) rotate(10deg);
+        -ms-transform: translate(-50%, -50%) rotate(10deg);
+        -o-transform: translate(-50%, -50%) rotate(10deg);
+}
+    100%{
+        transform: translate(-50%, -50%) rotate(0deg);
+        -webkit-transform: translate(-50%, -50%) rotate(0deg);
+        -moz-transform: translate(-50%, -50%) rotate(0deg);
+        -ms-transform: translate(-50%, -50%) rotate(0deg);
+        -o-transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
